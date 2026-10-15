@@ -1,0 +1,5 @@
+# Learning override; use a distinct namespace/release for a real staging environment.
+api:
+  replicas: 2
+worker:
+  replicas: 3
