@@ -1,0 +1,5 @@
+# Local kind environment; load queue-lab:dev before terraform apply.
+api:
+  replicas: 1
+worker:
+  replicas: 1
