@@ -1,0 +1,6 @@
+.git
+infra
+charts
+docs
+bin
+*.zip
