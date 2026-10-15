@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-config
+data:
+  HTTP_ADDR: ":8080"
+  REDIS_ADDR: "{{ .Release.Name }}-redis:6379"
+  REDIS_STREAM: {{ .Values.queue.stream | quote }}
+  REDIS_CONSUMER_GROUP: {{ .Values.queue.consumerGroup | quote }}
