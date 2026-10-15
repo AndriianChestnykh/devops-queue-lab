@@ -1,0 +1,29 @@
+image:
+  repository: queue-lab
+  tag: dev
+  pullPolicy: IfNotPresent
+api:
+  replicas: 1
+worker:
+  replicas: 1
+resources:
+  requests:
+    cpu: 50m
+    memory: 32Mi
+  limits:
+    cpu: 250m
+    memory: 128Mi
+redis:
+  image: redis:7.4-alpine
+  storage: 1Gi
+  storageClassName: ""
+  resources:
+    requests:
+      cpu: 50m
+      memory: 64Mi
+    limits:
+      cpu: 250m
+      memory: 256Mi
+queue:
+  stream: jobs
+  consumerGroup: workers
